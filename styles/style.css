@@ -47,10 +47,10 @@ header[role="banner"] button {
     color: #212121;
     text-transform: uppercase;
     min-height: 32px;
-    min-width: 128px;
+    min-width: 130px;
     padding: 0 20px;
     border-radius: 15px;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 200;
     letter-spacing: .12px;
     transition: color .2s ease, background .2s ease;
@@ -68,30 +68,32 @@ header[role="banner"] button:hover {
 
 .section {
     box-sizing: border-box;
-    padding-top: 84px;
+    padding-top: 85px;
     padding-bottom: 115px;
 }
 
 .section .section-title {
     font-weight: 600;
     text-transform: uppercase;
-    font-size: 22.5px;
+    font-size: 23px;
 }
 
 .services-list {
     box-sizing: border-box;
     padding-top: 55px;
+    position: relative;
 }
 
 .services-list .service {
     min-height: 175px;
-    min-width: 223px;
+    min-width: 225px;
     margin: 0 10px;
+    box-sizing: border-box;
     color: transparent;
     user-select: none;
     position: relative;
     text-transform: uppercase;
-    font-size: 21px;
+    font-size: 20px;
     font-weight: 500;
     letter-spacing: .2px;
     transition: color .5s ease;
@@ -129,7 +131,20 @@ header[role="banner"] button:hover {
 }
 
 @media all and (max-width:900px){
-	/* TABLET STYLES */
+    /* TABLET STYLES */
+    .services-list {
+        width: 100%;
+        padding-left:90px;
+        padding-right:90px;
+    }
+
+    .services-list .service {
+        margin-bottom: 20px;
+    }
+
+    .services-list .service::after {
+        background-position: center;
+    }
 }
 
 @media all and (max-width:600px){
